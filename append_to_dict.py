@@ -14,7 +14,7 @@ def determine_dir():
         arg = sys.argv[1]
         return "general" if arg == "GENERAL" else extension(arg)
 
-    return f'{os.environ["HOME"]}/.vim_dictionaries/{get_ext()}'
+    return '{}/.vim_dictionaries/{}'.format(os.environ["HOME"], get_ext())
 
 def write_file(name, word):
     with open(name, 'a') as infile:
